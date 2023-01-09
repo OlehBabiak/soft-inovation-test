@@ -1,0 +1,123 @@
+@import "src/styles/constants";
+
+li {
+  list-style: none;
+  padding: 0 15px;
+}
+
+a {
+  color: $nav-menu-color;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.active {
+  background-color: $active-link-bg;
+
+  a {
+    color: $active-link-color !important;
+    font-weight: 500;
+  }
+}
+
+.mat-toolbar {
+
+
+  .navbar-collapse {
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+    margin-left: 10rem;
+    height: 100%;
+
+    .navbar-nav {
+
+      ul {
+        display: flex;
+        height: 100%;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .navbar-right {
+      display: flex;
+      align-self: center;
+
+      div {
+        color: $nav-menu-color;
+      }
+    }
+
+    mat-icon {
+      margin-left: 20px;
+    }
+
+    .burger {
+      display: none;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .mat-toolbar {
+
+
+    .navbar-collapse {
+      display: flex;
+      justify-content: flex-end;
+
+      .navbar-nav {
+        display: none;
+      }
+
+      .burger {
+        display: flex;
+        align-items: center;
+
+        .navbar-toggle:hover {
+          border-color: white;
+        }
+
+        .navbar-toggle:focus {
+          background-color: $focus-bg;
+        }
+
+        .navbar-toggle {
+          position: relative;
+          float: right;
+          padding: 9px 10px;
+          margin: 8px 15px 8px 8px;
+          border: 1px solid transparent;
+          border-radius: 4px;
+          font-family: inherit;
+          font-size: inherit;
+          line-height: inherit;
+
+          .icon-bar {
+            display: block;
+            width: 22px;
+            height: 2px;
+            border-radius: 1px;
+            background-color: $nav-menu-color;
+          }
+
+          .icon-bar + .icon-bar {
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

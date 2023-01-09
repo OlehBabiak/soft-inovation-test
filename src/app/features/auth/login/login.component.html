@@ -1,0 +1,62 @@
+<div class='container'>
+  <form class='form' [formGroup]='loginForm' (ngSubmit)='onSubmit()'>
+    <mat-card>
+
+      <mat-form-field color='primary' class='full-width' appearance='outline'>
+        <mat-label>Email</mat-label>
+        <input
+          type='email'
+          id='email'
+          formControlName='email'
+          placeholder='Ex. pat@example.com'
+          matInput
+        >
+        <mat-error
+          class='help-block'
+          *ngIf="!loginForm.get('email')?.valid && loginForm.get('email')?.touched"
+        >
+          <mat-error
+            class='help-block'
+            *ngIf="loginForm.hasError('required', 'email')"
+          > This field is required!
+          </mat-error>
+          <mat-error
+            class='help-block'
+            *ngIf="loginForm.hasError('pattern', 'email')"
+          > This email is not valid!
+          </mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field color='primary' class='full-width' appearance='outline'>
+        <mat-label>Password</mat-label>
+        <input
+          type='password'
+          id='password'
+          formControlName='password'
+          autocomplete='on'
+          matInput
+        >
+        <mat-error
+          class='help-block'
+          *ngIf="!loginForm.get('password')?.valid && loginForm.get('password')?.touched"
+        >
+          <mat-error
+            class='help-block'
+            *ngIf="loginForm.hasError('required', 'password')"
+          > This field is required!
+          </mat-error>
+          <mat-error
+            class='help-block'
+            *ngIf="loginForm.hasError('minlength', 'password')"
+          > Password should have 6 characters minimum!
+          </mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <div>
+        <button [disabled]='!loginForm.valid' mat-raised-button type='submit' color='primary'>Login</button>
+      </div>
+    </mat-card>
+  </form>
+</div>

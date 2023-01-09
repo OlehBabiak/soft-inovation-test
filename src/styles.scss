@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-html, body { height: 100vh;  overflow-x: hidden; box-sizing: border-box}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+
+@import 'styles/common';
+@import 'styles/constants';
+
+html, body { height: 100%; overflow-x: hidden; box-sizing: border-box}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 

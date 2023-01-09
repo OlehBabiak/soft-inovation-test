@@ -1,0 +1,48 @@
+@import 'src/styles/constants';
+
+.filter {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 1200px) {
+  .large-screen {
+    display: none;
+  }
+  .small-screen {
+    .card {
+      .mat-card-header {
+
+        .mat-card-title-group {
+          width: 100%;
+
+          .mat-card-title {
+            font-size: $font-large;
+            margin-bottom: 40px;
+          }
+
+          .mat-card-subtitle {
+            font-size: $font-big;
+            margin-bottom: 25px;
+          }
+        }
+      }
+      .mat-card-content {
+        padding: 0 32px;
+      }
+    }
+  }
+  .card-button {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .small-screen {
+    display: none;
+  }
+}

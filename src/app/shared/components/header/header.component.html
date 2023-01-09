@@ -1,0 +1,36 @@
+<mat-toolbar class='mat-toolbar'>
+  <div class='logo'>
+    <a href='#'>SHOP</a>
+  </div>
+  <div class='navbar-collapse'>
+    <div class='navbar-nav'>
+      <ul>
+        <li *ngIf='isUserAuth' routerLinkActive="active"><a routerLink='/home'>Home</a></li>
+        <li *ngIf='isUserAuth' routerLinkActive="active"><a routerLink='/contacts'>Contacts</a></li>
+        <li *ngIf='isUserAuth' routerLinkActive="active"><a routerLink='/products'>Products</a></li>
+      </ul>
+    </div>
+    <div class="navbar-nav navbar-right">
+      <div *ngIf='isUserAuth'>
+        <span>{{ userName }}</span>
+      </div>
+      <mat-icon *ngIf='isUserAuth'><a (click)='onLogout()'>logout</a></mat-icon>
+      <mat-icon *ngIf='!isUserAuth'><a routerLink='/login'>login</a></mat-icon>
+      <mat-icon *ngIf='!isUserAuth'><a routerLink='register'>lock_open</a></mat-icon>
+    </div>
+    <div class="burger">
+      <button type="button" class="navbar-toggle" [matMenuTriggerFor]="menu">
+        <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]"></span>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button *ngIf='isUserAuth' mat-menu-item><mat-icon>home</mat-icon><a routerLink="/home">Home</a></button>
+        <button *ngIf='isUserAuth' mat-menu-item><mat-icon>contacts</mat-icon><a routerLink="/contacts">Contacts</a></button>
+        <button *ngIf='isUserAuth' mat-menu-item><mat-icon>shopping_bag</mat-icon><a routerLink="/products">Products</a></button>
+        <mat-divider></mat-divider>
+        <button *ngIf='isUserAuth' mat-menu-item (click)='onLogout()'><mat-icon>logout</mat-icon><a>Logout</a></button>
+        <button *ngIf='!isUserAuth' mat-menu-item><mat-icon>login</mat-icon><a routerLink="/login">Login</a></button>
+        <button *ngIf='!isUserAuth' mat-menu-item><mat-icon>lock_open</mat-icon><a routerLink="/register">Register!</a></button>
+      </mat-menu>
+    </div>
+  </div>
+</mat-toolbar>

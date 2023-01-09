@@ -1,0 +1,24 @@
+@import "src/styles/constants";
+
+.info {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    h2 {
+      font-size: $font-large1;
+    }
+    font-size: $font-big;
+    line-height: 1.42857;
+    width: 50%;
+    text-align: center;
+    span {
+      font-weight: bold;
+    }
+    p span {
+      font-weight: bold;
+    }
+  }
+}
