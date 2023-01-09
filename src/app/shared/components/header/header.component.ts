@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {AuthService} from "../../../core";
-import {Subscription} from "rxjs";
+import {AuthService} from '../../../core';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +13,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   private userSub!: Subscription;
   userName!: string
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService) {
+  }
 
   ngOnInit(): void {
     this.userSub = this.authService.loggedUser.subscribe(user => {

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {SharedModule} from "../../shared/shared.module";
+import {SharedModule} from '../../shared/shared.module';
 import { ContactsComponent } from './contacts.component';
-import {RouterModule} from "@angular/router";
-import {MatButtonModule} from "@angular/material/button";
+import {RouterModule} from '@angular/router';
+import {MatButtonModule} from '@angular/material/button';
 
 
 

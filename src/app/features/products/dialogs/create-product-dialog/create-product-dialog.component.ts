@@ -1,9 +1,9 @@
 import {Component, Inject, OnDestroy, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {IProduct, ProductService} from "../../../../core";
-import {Subscription} from "rxjs";
-import {MAT_DIALOG_DATA} from "@angular/material/dialog";
-import {CONTAIN_LINK_PATTERN} from "../../../../shared/constants/constants";
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {IProduct, ProductService} from '../../../../core';
+import {Subscription} from 'rxjs';
+import {MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {CONTAIN_LINK_PATTERN} from '../../../../shared/constants/constants';
 
 @Component({
   selector: 'app-create-product-dialog',

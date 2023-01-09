@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialog} from "@angular/material/dialog";
-import {CreateProductDialogComponent} from "./dialogs/create-product-dialog/create-product-dialog.component";
-import {ProductService} from "../../core";
+import {MatDialog} from '@angular/material/dialog';
+import {CreateProductDialogComponent} from './dialogs/create-product-dialog/create-product-dialog.component';
+import {ProductService} from '../../core';
 
 @Component({
   selector: 'app-products',

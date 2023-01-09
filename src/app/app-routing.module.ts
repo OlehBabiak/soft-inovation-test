@@ -1,8 +1,9 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {APP_BASE_HREF} from '@angular/common';
-import {NotFoundComponent} from "./not-found/not-found.component";
-import {AuthGuard} from "./core";
+
+import {NotFoundComponent} from './not-found/not-found.component';
+import {AuthGuard} from './core';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},

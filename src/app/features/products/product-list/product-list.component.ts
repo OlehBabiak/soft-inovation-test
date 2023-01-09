@@ -1,12 +1,12 @@
 import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
-import {IProduct, ProductService} from "../../../core";
-import {Subscription} from "rxjs";
-import {MatTableDataSource} from "@angular/material/table";
-import {MatPaginator} from "@angular/material/paginator";
-import {MatSort} from "@angular/material/sort";
-import {CreateProductDialogComponent} from "../dialogs/create-product-dialog/create-product-dialog.component";
-import {MatDialog} from "@angular/material/dialog";
-import {ActivatedRoute, Router} from "@angular/router";
+import {IProduct, ProductService} from '../../../core';
+import {Subscription} from 'rxjs';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {CreateProductDialogComponent} from '../dialogs/create-product-dialog/create-product-dialog.component';
+import {MatDialog} from '@angular/material/dialog';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
